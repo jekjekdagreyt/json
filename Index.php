@@ -7,6 +7,7 @@
 		$sql = "select * from Contact";
 		$dbrecords = mysqli_query($connect,$sql) or die("Unable to query data");
 	
+		header("Content-type: json");
 		
 		while($row = mysqli_fetch_object($dbrecords)) {
 				
